@@ -11,7 +11,33 @@
     tools:context="com.developer.arnold.whisperfibertheapp.MainActivity">
 
     <TextView
+        android:text="Whisper Fiber, The App"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/lblTitle"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <Button
+        android:text="Logs"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnLogs"
+        android:onClick="viewLogs"
+        android:layout_below="@+id/lblTitle"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="154dp"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="Customers"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnCustomers"
+        android:onClick="viewCustomers"
+        android:layout_below="@+id/btnLogs"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 </RelativeLayout>

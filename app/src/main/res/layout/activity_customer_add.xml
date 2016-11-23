@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_customer_add"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.developer.arnold.whisperfibertheapp.CustomerAdd"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:id="@+id/llCustomerName">
+
+            <TextView
+                android:text="Name:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblAddCustomerName"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/edtAddCustomerName"
+                android:layout_weight="0.40"
+                android:hint="Full name"
+                android:layout_marginLeft="30dp"
+                android:textAlignment="viewStart" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:id="@+id/llCustomerDate"
+            android:layout_weight="0.02"
+            android:weightSum="1">
+
+            <TextView
+                android:text="Date:"
+                android:id="@+id/lblAddCustomerDate"
+                android:textSize="24sp"
+                android:textAlignment="viewStart"
+                android:layout_weight="0.12"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginRight="1dp" />
+
+            <TextView
+                android:text="00/00/0000"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.78"
+                android:id="@+id/lblDateChosen"
+                android:gravity="center_vertical|center_horizontal" />
+
+            <Button
+                android:text="Date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnDate"
+                android:onClick="showDatePickerDialog"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:layout_marginLeft="0dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:id="@+id/llCustomerTime"
+            android:layout_weight="0.02"
+            android:weightSum="1">
+
+            <TextView
+                android:text="Time:"
+                android:id="@+id/lblAddCustomerTime"
+                android:textSize="24sp"
+                android:textAlignment="viewStart"
+                android:layout_weight="0.07"
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content" />
+
+            <TextView
+                android:text="00:00"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="0.83"
+                android:id="@+id/lblTimeChosen"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_marginRight="0dp" />
+
+            <Button
+                android:text="Time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnTime"
+                android:onClick="showTimePickerDialog"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="-5dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:id="@+id/llCustomerBuilding">
+
+            <TextView
+                android:text="Building:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblAddCustomerBuilding"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/edtAddCustomerBuilding"
+                android:layout_weight="0.80"
+                android:hint="Building"
+                android:layout_marginLeft="5dp"
+                android:textAlignment="viewStart" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:id="@+id/llLogUnit">
+
+            <TextView
+                android:text="Unit:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblAddCustomerUnit"
+                android:layout_weight="0.26"
+                android:textAlignment="viewStart"
+                android:textSize="24sp" />
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/edtAddCustomerUnit"
+                android:layout_weight="0.80"
+                android:hint="Unit #"
+                android:layout_marginLeft="41dp"
+                android:layout_width="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:id="@+id/llCustomerEmail">
+
+            <TextView
+                android:text="Email:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblAddCustomerEmail"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <EditText
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/edtAddCustomerEmail"
+                android:hint="E-mail"
+                android:layout_marginLeft="32dp"
+                android:layout_width="match_parent" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:id="@+id/llCustomerPhoneNumber">
+
+            <TextView
+                android:text="Phone:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblAddCustomerPhoneNumber"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/edtAddCustomerPhoneNumber"
+                android:layout_weight="0.80"
+                android:hint="Phone #"
+                android:layout_marginLeft="23dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:text="Hardware Info:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblHardwareInfo"
+                android:textSize="24sp" />
+
+            <Button
+                android:text="Hardware"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnHardwareInfo"
+                android:layout_weight="1"
+                android:onClick="goToHardwareInformation" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:id="@+id/llCustomerPaymentMethod">
+
+            <TextView
+                android:text="Payment Method:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblAddCustomerPaymentMethod"
+                android:textAlignment="center"
+                android:textSize="24sp" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                android:ems="10"
+                android:id="@+id/edtAddCustomerPaymentMethod"
+                android:layout_weight="0.80"
+                android:hint="Method"
+                android:layout_marginLeft="5dp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/llActiveInactive">
+
+            <CheckBox
+                android:text="Active?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/chActive"
+                android:layout_weight="1" />
+
+            <CheckBox
+                android:text="Hardware Retruned?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/chHardwareReturned"
+                android:layout_weight="1"
+                android:textSize="10sp" />
+
+            <CheckBox
+                android:text="Hardware Installed?"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/chHardwareInstalled"
+                android:layout_weight="1"
+                android:textSize="10sp"
+                android:checked="false" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/llCustomerNotes">
+
+            <TextView
+                android:text="Notes:"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblAddCustomerNotes"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:paddingBottom="0dp"
+                android:layout_marginTop="-10dp"
+                android:layout_marginRight="5dp" />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="65dp"
+                android:inputType="textMultiLine"
+                android:ems="10"
+                android:hint="Enter notes here"
+                android:id="@+id/edtNotes"
+                android:textAlignment="center" />
+
+        </LinearLayout>
+
+        <Button
+            android:text="Add Customer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnSaveCustomer"
+            android:onClick="addCustomer" />
+
+        <Button
+            android:text="Delete Customer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnRemoveCustomer"
+            android:onClick="removeCustomer" />
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_log_add"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="com.developer.arnold.whisperfibertheapp.LogAdd"
+    android:weightSum="1">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:id="@+id/llLogName">
+
+        <TextView
+            android:text="Name:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblAddLogName"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/edtAddLogName"
+            android:layout_weight="0.80"
+            android:hint="Enter name here"
+            android:layout_marginLeft="29dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:id="@+id/llLogDate"
+        android:layout_weight="0.02"
+        android:weightSum="1">
+
+        <TextView
+            android:text="Date:"
+            android:id="@+id/lblAddLogDate"
+            android:textSize="24sp"
+            android:textAlignment="viewStart"
+            android:layout_weight="0.12"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:layout_marginRight="1dp" />
+
+        <TextView
+            android:text="00/00/0000"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.78"
+            android:id="@+id/lblDateChosen"
+            android:gravity="center_vertical|center_horizontal" />
+
+        <Button
+            android:text="Date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnDate"
+            android:onClick="showDatePickerDialog"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:layout_marginLeft="0dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:id="@+id/llLogTime"
+        android:layout_weight="0.02"
+        android:weightSum="1">
+
+        <TextView
+            android:text="Time:"
+            android:id="@+id/lblAddLogTime"
+            android:textSize="24sp"
+            android:textAlignment="viewStart"
+            android:layout_weight="0.07"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content" />
+
+        <TextView
+            android:text="00:00"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="0.83"
+            android:id="@+id/lblTimeChosen"
+            android:gravity="center_vertical|center_horizontal"
+            android:layout_marginRight="0dp" />
+
+        <Button
+            android:text="Time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnTime"
+            android:onClick="showTimePickerDialog"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="-5dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:id="@+id/llLogBuilding">
+
+        <TextView
+            android:text="Building:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblAddLogBuilding"
+            android:textAlignment="center"
+            android:textSize="24sp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/edtAddLogBuilding"
+            android:layout_weight="0.80"
+            android:hint="Enter building here"
+            android:layout_marginLeft="5dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:id="@+id/llLogUnit">
+
+        <TextView
+            android:text="Unit:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblAddLogUnit"
+            android:layout_weight="0.26"
+            android:textAlignment="viewStart"
+            android:textSize="24sp" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/edtAddLogUnit"
+            android:layout_weight="0.80"
+            android:hint="Enter unit # here"
+            android:layout_marginLeft="41dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llLogNotes">
+
+        <TextView
+            android:text="Notes:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblAddLogNotes"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:paddingBottom="0dp"
+            android:layout_marginTop="-10dp"
+            android:layout_marginRight="5dp" />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:inputType="textMultiLine"
+            android:ems="10"
+            android:hint="Enter notes here"
+            android:id="@+id/edtNotes"
+            android:textAlignment="center" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llLogCustomer">
+
+        <TextView
+            android:text="Customer:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblAddCustomer"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:paddingBottom="0dp" />
+
+        <Spinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/spnCustomer" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llLogTypeOfService">
+
+        <TextView
+            android:text="Service:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/lblAddService"
+            android:textAlignment="viewStart"
+            android:textSize="24sp"
+            android:paddingBottom="0dp"
+            android:paddingRight="20dp" />
+
+        <Spinner
+            android:layout_height="wrap_content"
+            android:id="@+id/spnService"
+            android:layout_width="match_parent" />
+
+    </LinearLayout>
+
+    <Button
+        android:text="Add Log"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSaveLog"
+        android:onClick="addLog" />
+
+    <Button
+        android:text="Delete Log"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnRemoveLog"
+        android:onClick="removeLog" />
+</LinearLayout>
